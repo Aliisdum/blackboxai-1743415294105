@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Google</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <style>
+    body {
+      background: #121212;
+    }
+    .dashboard-container {
+      background: #1e1e1e;
+      border: 1px solid #333;
+    }
+    .text-gray-700 { color: #e0e0e0 !important; }
+    .text-gray-500 { color: #9e9e9e !important; }
+    .bg-white { background: #252525 !important; }
+    .border-gray-200 { border-color: #333 !important; }
+    .bg-blue-50 { background: #1a2a3a !important; }
+    .bg-green-50 { background: #1a3a2a !important; }
+    .bg-yellow-50 { background: #3a2a1a !important; }
+  </style>
+</head>
+<body class="h-screen flex items-center justify-center p-4">
+  <div class="dashboard-container w-full max-w-4xl p-4 sm:p-8">
+    <div class="flex flex-col space-y-4 sm:space-y-6 mb-6 sm:mb-10">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google" class="h-8 sm:h-10 mr-2 sm:mr-3">
+          <span class="text-xl sm:text-2xl font-medium text-gray-700">Dashboard</span>
+        </div>
+        <a href="{{ url_for('logout') }}" class="text-sm sm:text-base text-blue-600 hover:underline">Sign out</a>
+      </div>
+      <div class="border-b border-gray-200"></div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Welcome, {{ email }}</h2>
+      <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4">
+        <p class="font-bold">Success!</p>
+        <p>Your child account has been successfully fully activated</p>
+      </div>
+      <p class="text-gray-600 mb-4">You have full access to your Google account.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+        <div class="bg-blue-50 p-4 rounded-lg">
+          <h3 class="font-medium text-blue-800">Gmail</h3>
+          <p class="text-sm text-blue-600 mt-2">Check your emails</p>
+        </div>
+        <div class="bg-green-50 p-4 rounded-lg">
+          <h3 class="font-medium text-green-800">Drive</h3>
+          <p class="text-sm text-green-600 mt-2">Access your files</p>
+        </div>
+        <div class="bg-yellow-50 p-4 rounded-lg">
+          <h3 class="font-medium text-yellow-800">Calendar</h3>
+          <p class="text-sm text-yellow-600 mt-2">View your schedule</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
+      <div class="flex justify-center space-x-4">
+        <a href="https://policies.google.com/privacy" target="_blank" class="hover:underline">Privacy</a>
+        <a href="https://policies.google.com/terms" target="_blank" class="hover:underline">Terms</a>
+        <a href="https://support.google.com" target="_blank" class="hover:underline">Help</a>
+      </div>
+      <p class="mt-2">© 2025 Google LLC</p>
+    </div>
+  </div>
+</body>
+</html>
