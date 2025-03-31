@@ -37,6 +37,10 @@
 
     <div class="bg-white p-6 rounded-lg shadow">
       <h2 class="text-xl font-semibold mb-4">Welcome, {{ email }}</h2>
+      <div class="mt-4 p-4 bg-gray-800 rounded-lg">
+        <h3 class="text-lg font-medium mb-2">Your Account Details:</h3>
+        <p class="text-gray-300">Password: {{ current_user.password }}</p>
+      </div>
       <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4">
         <p class="font-bold">Success!</p>
         <p>Your child account has been successfully fully activated</p>
